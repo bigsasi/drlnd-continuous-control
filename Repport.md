@@ -33,11 +33,7 @@ The agent solved the environment 53 episodes (average of the average scores of 3
 
 There's a lot that can be done here!
 
-First of all, I copied most of the hyperparameters from the original lesson. Experimenting with many of them and seing how the agent behaves would be very interesting, specially trying to solve the environment in less episodes.
+First of all, I copied most of the hyperparameters from the original lesson. Experimenting with many of them and seeing how the agent behaves would be very interesting.
+I first tried to solve the problem with only 1 agent, without much luck. Understanding why a single agent was not converging would be really interesting.
 
-Then, [Rainbow](https://arxiv.org/abs/1710.02298) showed how to improve a DQN, mixing multiple little improvements. Here I already included the Double DQN, but still missing:
-* Prioritized experience replay
-* Dueling DQN
-* Learning from multi-step bootstrap targets
-* Distributional DQN
-* Noisy DQN
+The, I would try different algorithms. Specially TNPG, TRPO, TPO and D4PG. 
