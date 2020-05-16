@@ -10,13 +10,13 @@ Most of the algorithm is the DDPG offered to solve the [pendulum environment](ht
 * Use gradient clipping when training the critic network
 * Update the networks 10 times after every 20 timesteps.
 * Modify some hyperparameters:
- * BUFFER_SIZE = int(1e6)  # replay buffer size
- * BATCH_SIZE = 64         # minibatch size
- * GAMMA = 0.99            # discount factor
- * TAU = 1e-3              # for soft update of target parameters
- * LR_ACTOR = 1e-3         # learning rate of the actor
- * LR_CRITIC = 1e-4        # learning rate of the critic
- * WEIGHT_DECAY = 0        # L2 weight decay
+  * BUFFER_SIZE = int(1e6)  # replay buffer size
+  * BATCH_SIZE = 64         # minibatch size
+  * GAMMA = 0.99            # discount factor
+  * TAU = 1e-3              # for soft update of target parameters
+  * LR_ACTOR = 1e-3         # learning rate of the actor
+  * LR_CRITIC = 1e-4        # learning rate of the critic
+  * WEIGHT_DECAY = 0        # L2 weight decay
 
 The actor is a linear network with 400 and 300 units for the hidden layer. Input size is the state size and output the action size. Activation is relu but for the output layer, were I used tanh.
 Similarly, the critic is also linear with 400 and 400 300 units for the hidden layer, but the second layer gets as input the output of the first one and the action. Also, there is no activation for the output layer.
@@ -36,4 +36,4 @@ There's a lot that can be done here!
 First of all, I copied most of the hyperparameters from the original lesson. Experimenting with many of them and seeing how the agent behaves would be very interesting.
 I first tried to solve the problem with only 1 agent, without much luck. Understanding why a single agent was not converging would be really interesting.
 
-The, I would try different algorithms. Specially TNPG, TRPO, TPO and D4PG. 
+Then, I would try different algorithms. Specially TNPG, TRPO, TPO and D4PG. 
